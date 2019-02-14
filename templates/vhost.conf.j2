@@ -1,0 +1,14 @@
+server {
+
+    server_name {{ inventory_hostname }};
+
+    listen 80;
+
+    access_log /var/log/nginx/{{ inventory_hostname }}-access.log;
+    error_log /var/log/nginx/{{ inventory_hostname }}-error.log;
+
+    root /usr/share/nginx/html;
+
+    index index.html index.htm;
+
+}
